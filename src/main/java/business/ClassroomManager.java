@@ -1,30 +1,32 @@
 package business;
 
+import persistence.repository.IClassroomDBRepository;
+
+import javax.inject.Inject;
+
 public class ClassroomManager {
 
+    @Inject
+    IClassroomDBRepository repo;
 
-    public ClassroomManager(){
-
+    public String addClassroom(String classroom){
+        return repo.addClassroom(classroom);
     }
 
-    public void addClassroom(){
-
+    public String deleteClassroom(int id){
+        return repo.deleteClassroom(id);
     }
 
-    public void deleteClassroom(){
-
+    public String editClassroom(String classroom){
+        return repo.editClassroom(classroom);
     }
 
-    public void editClassroom(){
-
+    public String getAllClassrooms(){
+        return repo.getAllClassrooms();
     }
 
-    public void getAllClassrooms(){
-
-    }
-
-    public void getClassroomById(){
-
+    public String getClassroomById(int id){
+        return repo.getClassroomById(id);
     }
 
 

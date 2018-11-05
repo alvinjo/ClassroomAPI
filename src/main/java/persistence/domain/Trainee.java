@@ -1,18 +1,43 @@
 package persistence.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Trainee {
 
-    private int ID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int Id;
     private String name;
+    private int classroomId;
 
 
-    public Trainee(String name) {
+    public Trainee() {
 
     }
 
+    public Trainee(String name){
+        this.name = name;
+    }
 
     public String getName(){
-        return "";
+        return name;
+    }
+
+    public int getId(){
+        return Id;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getClassroomId(){
+        return classroomId;
+    }
+
+    public void setClassroomId(int id){
+        this.classroomId = id;
     }
 
 }
