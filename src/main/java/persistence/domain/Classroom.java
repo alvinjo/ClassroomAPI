@@ -13,7 +13,7 @@ public class Classroom {
     private static int classroomIDCount = 1;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "classroomId")
+//    @JoinColumn(name = "classroomId")
     private List<Trainee> trainees = new ArrayList<>();
 
 

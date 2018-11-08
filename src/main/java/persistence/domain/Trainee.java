@@ -9,6 +9,7 @@ public class Trainee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
     private String name;
+
     private int classroomId;
 
 
